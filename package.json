@@ -1,0 +1,34 @@
+{
+  "name": "test",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "prepublish": "selenium-standalone install",
+    "allure": "node_modules/.bin/allure report generate allure-results && node_modules/.bin/allure report open",
+    "test": "node_modules/.bin/wdio test/config/wdio.conf.js",
+    "clean": "rm -rf allure-* screenshots/diff/* screenshots/screen/*"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "allure-commandline": "^2.0.0",
+    "babel-cli": "^6.23.0",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-register": "^6.23.0",
+    "babel-runtime": "^6.23.0",
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
+    "easyimage": "^2.1.0",
+    "selenium-standalone": "^6.0.1",
+    "wdio-allure-reporter": "^0.1.2",
+    "wdio-element-screenshot": "^1.0.4",
+    "wdio-mocha-framework": "^0.5.10",
+    "wdio-screenshot": "^0.6.0",
+    "wdio-selenium-standalone-service": "0.0.8",
+    "wdio-visual-regression-service": "^0.8.0",
+    "webdriverio": "^4.0.9",
+    "winston": "^2.3.1"
+  }
+}
